@@ -8,11 +8,7 @@ fun todoTask38(): Nothing = TODO(
     """
 )
 
-fun <T> T.myApply(f: T.() -> Unit): T {
-    val foo = apply { f }
-    foo.f()
-    return foo
-}
+fun <T> T.myApply(f: T.() -> Unit): T = apply(f)
 
 fun buildString(): String {
     return StringBuilder().myApply {
